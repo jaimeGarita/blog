@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 
-/** 
+/**
 	Uses https://www.astroicon.dev/getting-started/
 	Find icons via guide: https://www.astroicon.dev/guides/customization/#open-source-icon-sets
 	Only installed pack is: @iconify-json/mdi
@@ -16,6 +16,11 @@ const socialLinks: {
 		friendlyName: "Github",
 		link: "https://github.com/jaimegarita",
 		name: "mdi:github",
+	},
+  {
+		friendlyName: "Linkedin",
+		link: "https://www.linkedin.com/in/jaime-garitagoitia-camargo/",
+		name: "mdi:linkedin",
 	},
 ];
 ---
@@ -36,6 +41,7 @@ const socialLinks: {
 						<span class="sr-only">{friendlyName}</span>
 					</a>
 				</li>
+
 			))
 		}
 	</ul>

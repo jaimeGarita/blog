@@ -1,0 +1,39 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+
+// Definir un array de proyectos
+const projects = [
+    {
+        title: "SERDER",
+        description: "Serialización y deserielización con kafka",
+        imageUrl: "../../public/serder_microservices.PNG",
+        linkUrl: "https://github.com/jaimeGarita/serde"
+    },
+    {
+        title: "Event Driven",
+        description: "Ejemplo sencillo arquitectura Event Driven",
+        imageUrl: "../../public/event-driven.jpg",
+        linkUrl: "https://github.com/jaimeGarita/user_management"
+    },
+
+];
+---
+
+<PageLayout meta={{ title: "Proyectos" }}>
+    <section>
+        <h1 class="title mb-6">Mis proyectos</h1>
+        <p class="mb-4">Como desarrollador Backend, he creado los siguientes proyectos personales:</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {projects.map(project => (
+                <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    imageUrl={project.imageUrl}
+                    linkUrl={project.linkUrl}
+                />
+            ))}
+        </div>
+    </section>
+
+</PageLayout>

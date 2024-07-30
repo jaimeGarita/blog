@@ -14,7 +14,7 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	// Meta property used as the default description meta property
-	description: "Bits y bite con Jaime, un blog donde podas encontrar información acerca de Microservicios, DDD, CQRS y mucho más",
+	description: "Bienvenido al espacio de Jaime, un blog donde podas encontrar información acerca de Microservicios, DDD, CQRS y mucho más",
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: "es-ES",
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "Blog Jaime Garitagoitia",
 	webmentions: {
-		link: "https://webmention.io/blog.jaimegarita.com/webmention",
+		link: "https://webmention.io/jaimegarita.com/webmention",
 	},
 };
 
@@ -36,8 +36,12 @@ export const menuLinks: { path: string; title: string }[] = [
 	},
 
 	{
-		path: "/posts/",
+		path: "/blog/",
 		title: "Blog",
+	},
+  {
+		path: "/project/",
+		title: "Proyectos",
 	},
 ];
 
