@@ -34,7 +34,14 @@ export const menuLinks: { path: string; title: string }[] = [
 		path: "/",
 		title: "Inicio",
 	},
-
+  {
+		path: "/about/",
+		title: "Sobre mi",
+	},
+  {
+		path: "/stack/",
+		title: "Tecnologías",
+	},
 	{
 		path: "/blog/",
 		title: "Blog",

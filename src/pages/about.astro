@@ -1,0 +1,96 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const experience: { date: string; desc: string; href: string; title: string }[] = [
+	{
+		date: "Junio 2023 - Actualidad",
+		desc: "Desarrollo de un software de gestion documental, utilizando tecnologias como microservicios, siguiente una arquitectura hexagonal y trabajando con microlitos sin infraestructura pero con comunicación via HTTP. A su vez diseñe y desarrolle una arquitectura en backend en la que se usaba una arquitectura de microlitos sin infraestructura y a su vez permitiendo una comunicación cliente servidor con la parte frontal del aplicativo.",
+		href: "https://exceltic.com/",
+		title: "Exceltic",
+	},
+	{
+		date: "Marzo 2021 - Junio 2023",
+		desc: 'Reparaciónes de ordenadores y mantenimiento de equipos. Tareas de "HelpDesk" a distinas clínicas de la empresa',
+		href: "",
+		title: "Centros ideal",
+	},
+];
+
+const education: { date: string; href: string; school: string; title: string }[] = [
+	{
+		date: "Septiembre 2024 - Actualidad",
+		href: "https://mioti.es/es/",
+		school: "MIOTI Tech & Business School",
+		title: "Data & Cloud Engineer",
+	},
+	{
+		date: "2021 - 2023",
+		href: "https://salesianosdosa.com/",
+		school: "Colegio Salesianos Santo Domingo Savio",
+		title: "Grado superior en desarrollo de aplicaciónes multiplataforma",
+	},
+	{
+		date: "2019 - 2021",
+		href: "https://salesianosdosa.com/",
+		school: "Colegio Salesianos Santo Domingo Savio",
+		title: "Grado medio sistemas microinformáticos y redes",
+	},
+];
+---
+
+<PageLayout meta={{ title: "Home" }}>
+	<section>
+		<h1 class="title mb-6">Sobre mi</h1>
+		<h2 class="title mb-4 text-xl">Experiencia</h2>
+		<p></p>
+		<dl class="space-y-4">
+			{
+				experience.map(({ date, desc, href, title }) => (
+					<div class="">
+						<dt>
+							<span class="flex gap-2">
+								<a
+									class="cactus-link font-bold text-accent"
+									href={href}
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									{title}
+								</a>
+
+								<p class="text-gray-500"> ({date})</p>
+							</span>
+						</dt>
+						<dd>{desc}</dd>
+					</div>
+				))
+			}
+		</dl>
+	</section>
+	<section>
+		<h2 class="title mb-4 mt-10 text-xl">Formación profesional</h2>
+		<p></p>
+		<dl class="space-y-4">
+			{
+				education.map(({ date, href, school, title }) => (
+					<div class="">
+						<dt>
+							<span class="flex gap-2">
+								<a
+									class="cactus-link font-bold text-accent"
+									href={href}
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									{school}
+								</a>
+								:<p class="text-gray-500"> ({date})</p>
+							</span>
+						</dt>
+						<dd>{title}</dd>
+					</div>
+				))
+			}
+		</dl>
+	</section>
+</PageLayout>

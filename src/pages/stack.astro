@@ -1,0 +1,57 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const technologies: { desc: string; href: string; title: string }[] = [
+	{
+		desc: "Desarrollo aplicaciones API REST siguiendo un paradigma Controller Service Repository con Spring Boot.",
+		href: "https://www.java.com/es/",
+		title: "Java",
+	},
+	{
+		desc: " Uso docker para utilizar una arquitectura basada en microservicios intentando seguir arquitecturas Hexagonales. A su vez he implementado arquitecturas de microlitos sin infraestrcutura al igual que microlitos por comunicación vía HTTP.",
+		href: "https://www.docker.com/",
+		title: "Docker",
+	},
+
+	{
+		desc: "Desarrollo de comunicación entre microservicios intentando seguir una arquitectura de comunicación mediante eventos de dominio.",
+		href: "https://kafka.apache.org/",
+		title: "Kafka",
+	},
+  {
+    desc: "Gestiono el control de versiones para los proyectos. Permitiendo la administración de ramas y el mantenimiento los repositorios.",
+		href: "https://git-scm.com/",
+		title: "Git",
+	},
+];
+---
+
+<PageLayout meta={{ title: "stack" }}>
+	<section>
+		<h1 class="title mb-6">Stack tecnológico</h1>
+		<p class="mb-4">Como desarrollador backend he trabajado en las siguiente tecnologías:</p>
+		<p></p>
+		<dl class="space-y-4">
+			{
+				technologies.map(({ desc, href, title }) => (
+					<div class="flex flex-col gap-2 sm:flex-row">
+						<dt>
+							<span class="flex">
+								<a
+									class="cactus-link font-bold text-accent"
+									href={href}
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									{title}
+								</a>
+								:
+							</span>
+						</dt>
+						<dd>{desc}</dd>
+					</div>
+				))
+			}
+		</dl>
+	</section>
+</PageLayout>

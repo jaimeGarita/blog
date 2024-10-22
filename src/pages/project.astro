@@ -1,20 +1,20 @@
 ---
-import PageLayout from "@/layouts/Base.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
+import PageLayout from "@/layouts/Base.astro";
 
 // Definir un array de proyectos
 const projects = [
     {
-        title: "SERDER",
         description: "Serialización y deserielización con kafka",
         imageUrl: "/serder_microservices.PNG",
-        linkUrl: "https://github.com/jaimeGarita/serde"
+        linkUrl: "https://github.com/jaimeGarita/serde",
+        title: "SERDER"
     },
     {
-        title: "Event Driven",
         description: "Ejemplo sencillo arquitectura Event Driven",
         imageUrl: "/event-driven.jpg",
-        linkUrl: "https://github.com/jaimeGarita/user_management"
+        linkUrl: "https://github.com/jaimeGarita/user_management",
+        title: "Event Driven"
     },
 
 ];
@@ -27,10 +27,10 @@ const projects = [
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map(project => (
                 <ProjectCard
-                    title={project.title}
                     description={project.description}
                     imageUrl={project.imageUrl}
                     linkUrl={project.linkUrl}
+                    title={project.title}
                 />
             ))}
         </div>
